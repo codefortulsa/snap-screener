@@ -1,0 +1,389 @@
+@tailwind base;
+
+html, body, #root, .App {
+  min-height: 100%;
+  min-height: 100vh;
+  min-width: 320px;
+  overflow: auto; /* this is needed when you resize the screen */
+}
+
+html, body {
+  background-color: #EBE5E3;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+}
+
+/* header */
+header {
+  /* color: #000000; */
+}
+header button.active {
+  @apply underline;
+}
+header .control-bar {
+  @apply p-4;
+
+  background-color: #006FA6;
+  color: #FFFFFF;
+}
+
+.page-light-blue header button.active,
+.page-dark-blue header button.active,
+.page-yellow header button.active {
+  color: #FFFFFF;
+}
+
+.page-dark-blue header {
+  color: #BD202E;
+}
+.page-dark-blue header button.active {
+  color: #FFFFFF;
+}
+
+/* footer */
+footer {
+  @apply text-xs;
+  color: #000000;
+}
+
+/* headers */
+h1, h2, h3 {
+  @apply my-8;
+  @apply font-bold;
+  @apply leading-tight;
+
+  color: #006FA6;
+}
+
+h1 {
+  @apply text-4xl;
+}
+
+h2 {
+  @apply text-3xl;
+}
+
+h3 {
+  @apply text-2xl;
+}
+
+.ruled-headers h1 ,
+.ruled-headers h2 ,
+.ruled-headers h3 {
+  @apply inline-block;
+}
+
+.ruled-headers h1:after ,
+.ruled-headers h2:after ,
+.ruled-headers h3:after {
+  /* https://www.steckinsights.com/shorten-length-border-bottom-pure-css/ */
+  content: ""; /* This is necessary for the pseudo element to work. */
+  display: block; /* This will put the pseudo element on its own line. */
+  /* margin: 0 auto; */ /* This will center the border. */
+  width: 50%; /* Change this to whatever width you want. */
+  padding-top: 20px; /* This creates some space between the element and the border. */
+  border-bottom: 1px solid #BD202E; /* This creates the border. Replace black with whatever color you want. */
+}
+
+
+.page-light-blue h1 ,
+.page-light-blue h2 ,
+.page-light-blue h3 {
+  color: #FFFFFF;
+}
+
+.page-dark-blue h1 ,
+.page-dark-blue h2 ,
+.page-dark-blue h3 {
+  color: #00ADEE;
+  position: relative;
+}
+
+a {
+  @apply text-blue-600;
+  @apply underline;
+}
+
+.btn {
+  @apply text-white;
+  @apply font-bold;
+  @apply py-2;
+  @apply px-4;
+  @apply rounded;
+  @apply no-underline;
+  @apply inline-block;
+  @apply border-white;
+  @apply border;
+  @apply border-2;
+  @apply text-lg;
+  @apply h-12;
+
+  min-width: 8rem;
+
+  background-color: #006FA6;
+}
+
+.btn .icon {
+  @apply inline-block;
+  @apply h-full;
+  @apply mx-2;
+  @apply -mt-1;
+}
+
+.btn .icon.left {
+  @apply -ml-2;
+}
+
+.btn .icon.right {
+  @apply -mr-2;
+}
+
+@screen md {
+  .btn {
+    min-width: 16rem;
+  }
+}
+
+.page-yellow {
+    background-color: #FAAF41;
+}
+
+.page-yellow .btn {
+    background-color: #00ADEE;
+}
+
+/* form */
+.page-light-blue {
+  background-color: #00ADEE;
+}
+
+.page-light-blue .btn {
+  background-color: #FAAF41;
+}
+
+/* eligible */
+.page-dark-blue {
+  background-color: #2E368F;
+  color: #FFFFFF;
+}
+
+p, dl, ol, ul {
+  @apply my-4;
+}
+
+ul {
+  @apply list-disc;
+  @apply list-inside;
+}
+
+aside .btn {
+  /* @apply mx-0; */
+  @apply inline-block;
+  @apply mt-8;
+  @apply text-center;
+}
+/* aside a {
+  @apply no-underline;
+  @apply text-white;
+} */
+
+@screen lg {
+  aside .btn {
+    @apply block;
+    @apply text-center;
+    @apply w-full;
+  }
+}
+
+form {
+  @apply text-left;
+
+  color: #006FA6;
+}
+
+form h2 {
+  @apply mt-0;
+  @apply mb-2;
+}
+
+form .btn {
+  @apply m-4;
+}
+
+form .buttons {
+  @apply my-8;
+  @apply text-right;
+
+  @apply flex;
+  @apply justify-center;
+}
+
+form .buttons :disabled {
+  @apply opacity-50;
+}
+
+form label {
+  @apply m-4;
+}
+
+form select:focus {
+  @apply outline-none;
+}
+
+form input[type=email],
+form input[type=number],
+form input[type=text],
+form select {
+  @apply h-8;
+}
+
+form input[type=email],
+form input[type=number],
+form input[type=text],
+form select,
+form textarea {
+  @apply appearance-none;
+  @apply bg-white;
+  @apply border-2;
+  @apply rounded;
+  @apply p-1;
+  @apply leading-none;
+
+  border-color: #006FA6;
+}
+
+.address, .contact {
+  @apply mx-auto;
+  @apply max-w-xl;
+}
+
+.address label, .contact label {
+  @apply mt-0;
+  @apply ml-0;
+}
+
+.input-preview {
+  @apply absolute;
+  @apply bottom-0;
+}
+
+pre,
+code {
+  @apply text-xs;
+  @apply text-left;
+  @apply text-xs;
+  @apply text-gray-400;
+}
+
+.error {
+  @apply italic;
+  color: #BD202E;
+}
+
+@import '~pretty-checkbox/dist/pretty-checkbox.css';
+
+.pretty .state label::before {
+  @apply border-2;
+
+  background-color: #FFFFFF;
+  border-color: #006FA6;
+}
+
+.pretty.p-default input:checked ~ .state label::after {
+  background-color: #006FA6 !important;
+}
+
+.numbered {
+  @apply relative;
+  @apply inline-block;
+  @apply m-2;
+
+  height: 2rem;
+  width: 2rem;
+}
+
+.numbered.more {
+  width: auto;
+}
+
+.numbered input {
+  @apply cursor-pointer;
+  @apply appearance-none;
+  @apply w-full;
+  @apply h-full;
+  @apply absolute;
+  @apply top-0;
+  @apply left-0;
+  @apply bg-transparent;
+
+  z-index: 2;
+}
+
+
+.numbered .state {
+  @apply rounded-full;
+  @apply w-full;
+  @apply h-full;
+  @apply relative;
+  @apply top-0;
+  @apply left-0;
+
+  background-color: #006FA6;
+  color: #FFFFFF;
+  z-index: 1;
+}
+
+.numbered.more .state {
+  @apply px-2;
+
+  border-radius: 0.75rem;
+}
+
+.numbered input:checked ~ .state {
+  background-color: #FFFFFF;
+  color: #006FA6;
+}
+
+.numbered .state label {
+  @apply inline-block;
+  @apply m-0;
+  @apply w-full;
+  @apply text-center;
+  @apply font-bold;
+
+  line-height: 2rem;
+  font-size: 1rem;
+  vertical-align: middle;
+}
+
+form input[type="number"]::-webkit-outer-spin-button,
+form input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+form input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.home-icons p {
+  @apply my-16;
+}
+
+.home-icons p img {
+  @apply mx-auto;
+  @apply my-4;
+  @apply h-24;
+}
+
+.light-blue-page-content {
+  @apply m-8;
+  @apply p-8;
+  @apply pt-0;
+
+  background-color: #dbe1f2;
+}
+
+@tailwind components;
+
+@tailwind utilities;
+

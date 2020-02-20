@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  web:
+    build: ./web
+    volumes:
+      - ./web/api:/var/www/api
+      - ./web/build:/var/www/html
+    ports:
+      - 5000:80
+
+  mailhog:
+    image: mailhog/mailhog
+    ports:
+      - 8025:8025
