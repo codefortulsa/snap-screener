@@ -72,3 +72,11 @@ $ node scripts/generate-contacts.js
 - [react-i18next](https://react.i18next.com/)
 - [react-router](https://reacttraining.com/react-router/)
 - [tailwindcss](https://tailwindcss.com/)
+
+## What we need and how to help.
+
+We’re launching the tool as a pilot. Throughout the next few months, we’ll want to collect information from users about what they found to be easy, what challenges they ran into, and how we can make the tool even better and easier to use.
+
+The code for the SNAP screener is here on GitHub, but it’s not easily deployed to the live website. We’d like to streamline that process so we can have a repo that automatically pushes updates to the live site when we have changes or improvements in the future.
+
+We would also love to build an easy way for HFO to edit the list of TPS contacts, so that when this information changes, HFO can quickly and easily keep this information accurate and up-to-date.
