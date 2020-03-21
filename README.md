@@ -45,7 +45,7 @@ REACT_APP_API_FORM_SUBMIT='http://localhost:5000/api/form-submit'
 
 ```console
 $ docker-compose up -d
-$ cd web && yarn start
+$ cd web && npm install && yarn start
 ```
 
 ### Generate Contacts
@@ -54,6 +54,7 @@ Edit `web/data/contacts.csv`
 
 ```console
 $ cd web
+$ npm install
 $ yarn install
 $ node scripts/generate-contacts.js
 ```
@@ -63,6 +64,7 @@ $ node scripts/generate-contacts.js
 ### Requirements
 
 - node v10.16.3
+- docker
 - yarn
 
 ### Primary Dependencies
@@ -80,3 +82,11 @@ We’re launching the tool as a pilot. Throughout the next few months, we’ll w
 The code for the SNAP screener is here on GitHub, but it’s not easily deployed to the live website. We’d like to streamline that process so we can have a repo that automatically pushes updates to the live site when we have changes or improvements in the future.
 
 We would also love to build an easy way for HFO to edit the list of TPS contacts, so that when this information changes, HFO can quickly and easily keep this information accurate and up-to-date.
+
+
+### original deploy to heroku followed these instructions:
+
+https://devcenter.heroku.com/articles/build-docker-images-heroku-yml
+
+and the fix for the `more than one MPM loaded` error:
+https://github.com/docker-library/wordpress/issues/293
