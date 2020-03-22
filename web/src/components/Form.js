@@ -34,6 +34,7 @@ const apiFormSubmitUrl = () => {
 const onSubmit = (history) => {
   return async (values) => {
     await sleep(300)
+    console.log(values)
 
     axios.post(apiFormSubmitUrl(), values)
       .then(function (response) {
