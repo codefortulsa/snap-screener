@@ -8,6 +8,7 @@ import Contact from './Contact'
 import Wizard from './Wizard'
 import FiveNumberedRadioFields from './FiveNumberedRadioFields'
 import SelectField from './SelectField'
+import Eligibility from './Eligibility.js'
 import { Error, required } from './Error'
 import SchoolContactContext, { schoolContactOptions } from '../contexts/SchoolContactContext'
 
@@ -16,29 +17,14 @@ import iconPhone from '../img/icons/phone.svg'
 import iconArrowLeft from '../img/icons/arrow-left.svg'
 import iconArrowRight from '../img/icons/arrow-right.svg'
 
-import axios from 'axios'
-
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
-
-const apiFormSubmitUrl = () => {
-  const api_form_submit = document.querySelector('meta[name=x-api-form-submit]')
-  const api_form_submit_url = api_form_submit.getAttribute('content')
-
-  if (!api_form_submit_url) {
-    throw new Error('Missing API Form Submit URL')
-  }
-
-  return api_form_submit_url
-}
 
 const onSubmit = (history) => {
   return async (values) => {
     await sleep(300)
-    console.log(values)
 
-    axios.post(apiFormSubmitUrl(), values)
-      .then(function (response) {
-        switch (response.data.eligibility) {
+    const response = Eligibility(values)
+        switch (response) {
           case 'eligible':
             history.push('/eligible')
           break
@@ -49,10 +35,6 @@ const onSubmit = (history) => {
             // ?
           break
         }
-      })
-      .catch(function (_error) {
-        // console.error({ history, error })
-      })
   }
 }
 
