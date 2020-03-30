@@ -1,0 +1,102 @@
+{
+  "translation": {
+    "header": {
+      "foodAssistance": "Food Assistance"
+    },
+
+    "footer": {
+      "specialThanks": "Special thanks to <1>Tulsa Public Schools</1> for their support and partnership on this project. The Supplemental Nutrition Assistance Program (SNAP) is a federal program, administered by the office of the <3>Oklahoma Department of Human Services</3> (OKDHS). For more information about OKDHS, visit <5>okdhslive.org</5> or call (405) 487-5483."
+    },
+
+    "home": {
+      "heading": "Find out if you are eligible for food assistance.",
+      "stepOne": "Tell us some information about the members of your family.",
+      "stepTwo": "Let us know how we can get in touch with you.",
+      "stepThree": "Find out what assistance you might qualify for.",
+      "getStarted": "Get Started",
+      "continue": "Continue"
+    },
+
+    "breadcrumbs": {
+      "family": "Family",
+      "income": "Income",
+      "contact": "Contact",
+      "school": "School"
+    },
+
+    "formControls": {
+      "next": "Next",
+      "previous": "Previous",
+      "submit": "Submit",
+      "required": "Required"
+    },
+
+    "stageOne": {
+      "heading": "Tell us about your household size.",
+      "howManyChildrenUnder18": "How many children <1>under the age of 18</1> live in your home?",
+      "howManyAdultsOver18": "How many adults <1>18 and over</1> live in your home? <3>Including you.</3>",
+      "howManyAdultsOver60": "How many adults <1>over the age of 60</1> live in your home?"
+    },
+
+    "stageTwo": {
+      "heading": "What is your household income?",
+      "subheading": "To find out if you're eligible for food assistance, we need to know about your household income. Let us know the total income you receive from your job, or if you're self-employed, or any income from other benefits such as Social Security, TANF, WIC, or any other sources. For example, you can indicate that you receive $200 per week. Or $800 per month.",
+      "per": "per",
+      "every": "every",
+      "Week": "Week",
+      "2 Weeks": "2 Weeks",
+      "Month": "Month",
+      "Year": "Year"
+    },
+
+    "stageThree": {
+      "heading": "Let us know how to get in touch with you.",
+      "yourFirstName": "Your first name",
+      "whichContactMethod": "How do you want to be contacted?",
+      "Email": "Email",
+      "Phone": "Phone Call",
+      "Text": "Text Message",
+      "emailAddress": "Email Address",
+      "phoneNumber": "Phone Number",
+      "contactPermission": "May we contact you for food assistance opportunities?",
+      "Yes": "Yes",
+      "No": "No",
+      "address": "Address (include apt # if applicable)",
+      "city": "City",
+      "state": "State",
+      "zip": "Zip code"
+    },
+
+    "stageFour": {
+      "heading": "Please select a school you are associated with:",
+      "searchSchools": "Search schools",
+      "pressingSubmitDisclaimer": "Pressing 'Submit' will send out your information processing."
+    },
+
+    "eligible": {
+      "heading": "You may be eligible for food assistance.",
+      "subheading": "OKDHS determines eligibility for SNAP benefits. Based on the income information you provided you are likely eligible to receive SNAP benefits.",
+      "whatNextHeading": "What happens next:",
+      "whatNextDescription": "A school staff member will contact you within 3-5 business days to assist you with the SNAP application.",
+      "youWillNeedHeading": "You will need the following information when applying for SNAP benefits:",
+      "youWillNeedList": [
+        "All household members: name, date of birth, social security number (if available)",
+        "Income (if applicable): paycheck stubs, child support, alimony, social security payments, etc.",
+        "Expenses: housing and utility expenses",
+        "Utility bills to verify residency",
+        "Private health insurance information"
+      ],
+      "immediateAssistance": "For immediate resource assistance <1>Call 211</1>.",
+      "contactWICOffice": "You can also contact the <1>Tulsa Health Department WIC Office</1>.",
+      "youCanApplyOnline": "You can also apply for SNAP benefits online.",
+      "applyOnline": "Apply Online"
+    },
+
+    "ineligible": {
+      "heading": "A Facilitator will Contact You",
+      "subheading": "A school staff member will contact you within 3-5 business days to provide you with food assistance resources.",
+      "otherResourcesHeading": "Other Resources",
+      "otherResourcesDescription": "For immediate community resources <1>click here</1>."
+    }
+  }
+}

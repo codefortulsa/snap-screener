@@ -1,0 +1,4 @@
+{
+  "search.exclude": { "**/node_modules": true },
+  "search.followSymlinks": false
+}
