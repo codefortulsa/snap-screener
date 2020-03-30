@@ -66,5 +66,6 @@ npm start
 - [ ] Domain handling (_to get site pointed from \*.hungerfreeok.org_)
 - [ ] Domain email validation (_to get emails as sent from HFO_)
 - [ ] Continus deployment via GitHub Actions (_to redeploy cloud function + web app whenever commit is pushed to master branch_)
+- [ ] Add Google Analytics for tracking
 - [ ] Possibly use Google Places Autocomplete API for address lookup?
 - [ ] Possibly set up a hosted staging environment linked with a dev branch?
