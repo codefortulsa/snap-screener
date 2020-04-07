@@ -1,4 +1,4 @@
-export const NOTIFY_CC = 'chris@codefortulsa.org';
+export const NOTIFY_CC = 'treba.shyers@hungerfreeok.org';
 export const MAILJET_TEMPLATE_ID = 1324049;
 
 export const CLOUD_FUNCTIONS_SUBMIT_URL =
