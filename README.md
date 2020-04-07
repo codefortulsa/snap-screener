@@ -1,92 +1,71 @@
-# SNAP Screener
+<p align="center">
+  <img width="384" height="48" src='./src/img/HFO_logo_horiz.png?raw=true' alt="Hunger Free Oklahoma" />
+</p>
+
+<h1 align="center">
+  <b>SNAP Screener</b>
+</h1>
+
+<h3 align="center">
+  Find out if you are eligible for food assistance at <b><a href="https://snap-screener-ok.web.app/">web address TBD</a></b>.
+</h3>
+
+---
+
+The SNAP Screener is a single-page web application built with React and hosted on Firebase Hosting. Currently avaiable at [snap-screener-ok.firebaseapp.com](https://snap-screener-ok.web.app/) with final domain forthcoming. School contacts are managed with a [Google Sheet available here](https://docs.google.com/spreadsheets/d/1V1vWm9HNuiVOnXYAXoXW5f6KmsoAKjA3En_GYl93kYk/edit?usp=sharing). All other pertinent settings are available within `src/lib/config.js`—such as who recieves all email notifications with the variable `NOTIFY_CC`.
+
+**PLEASE NOTE**: The spreadsheet uses real email addresses so submitting a form will, in fact, send emails out to all contacts listed for the selected school.
+
+---
+
+## Partners
 
 - [Hunger Free Oklahoma](https://hungerfreeok.org/)
 - [Tulsa Public Schools](https://www.tulsaschools.org/)
 - [Oklahoma Department of Human Services](http://www.okdhs.org/)
 - [Spark Collaborative](https://creativespark.group/)
 - [Underdog Systems](https://underdog.systems/)
+- [Code for Tulsa](https://codefortulsa.org/)
 
-## Operation
+---
 
-### Envrionment
+## Technology
 
-PHP API Application
+- [Typescript](https://www.typescriptlang.org/)
+- [React](https://reactjs.org/) via [Create React App](https://create-react-app.dev/)
+- [Styled Components](https://styled-components.com/)
+- [React i18next](https://react.i18next.com/)
+- [React Router](https://reacttraining.com/react-router/)
+- [Firebase](https://firebase.google.com/) via [Hosting](https://firebase.google.com/products/hosting) + [Functions](https://firebase.google.com/products/functions)
+- [Mailjet](https://www.mailjet.com/)
 
-- `APP_ENV`: Application environment. (example: `development` or `production`)
-  - `development` used for permissive CORS headers.
-- `APP_NOTIFY_FROM`: **required** (example: `"SNAP Screener (no-reply)" <no-reply@hungerfreeok.org>`)
-- `APP_NOTIFY_CC`: **required** (example: `"Jane Doe" <jane.doe@hungerfreeok.org>`)
-- `APP_MAIL_HOST`: **required** Host server for SMTP delivery
-- `APP_MAIL_PORT`: **required** Host server port for SMTP delivery
-- `APP_MAIL_USERNAME`: Username for SMTP authentication
-- `APP_MAIL_PASSWORD`: Password for SMTP authentication
-- `APP_MAIL_SECURE`: Security setting (example: `tls`)
-  - `tls` used by Heroku/Mailtrap.
+---
 
-React APP
+## Development
 
-- `REACT_APP_API_FORM_SUBMIT`: **required** API URL for form submission. (example: `/api/form-submit`)
-
-### Development
-
-```bash
-# web/.env
-APP_ENV=development
-APP_MAIL_HOST=mailhog
-APP_MAIL_PORT=1025
-APP_NOTIFY_FROM='"SNAP Screener (no-reply)" <no-reply@hungerfreeok.org>'
-APP_NOTIFY_CC='"Jane Doe" <jane.doe@hungerfreeok.org>'
-```
-
-```bash
-# web/api/.env
-REACT_APP_API_FORM_SUBMIT='http://localhost:5000/api/form-submit'
-```
+To get started developing locally, clone the project. The from the root directory, run:
 
 ```console
-$ docker-compose up -d
-$ cd web && npm install && yarn start
+npm install
+npm start
 ```
 
-### Generate Contacts
+#### Requirements
 
-Edit `web/data/contacts.csv`
+- node > v10
 
-```console
-$ cd web
-$ npm install
-$ yarn install
-$ node scripts/generate-contacts.js
-```
+---
 
-## Software
+## Task List
 
-### Requirements
-
-- node v10.16.3
-- docker
-- yarn
-
-### Primary Dependencies
-
-- [create-react-app](https://create-react-app.dev/)
-- [react-final-form](https://final-form.org/react)
-- [react-i18next](https://react.i18next.com/)
-- [react-router](https://reacttraining.com/react-router/)
-- [tailwindcss](https://tailwindcss.com/)
-
-## What we need and how to help.
-
-We’re launching the tool as a pilot. Throughout the next few months, we’ll want to collect information from users about what they found to be easy, what challenges they ran into, and how we can make the tool even better and easier to use.
-
-The code for the SNAP screener is here on GitHub, but it’s not easily deployed to the live website. We’d like to streamline that process so we can have a repo that automatically pushes updates to the live site when we have changes or improvements in the future.
-
-We would also love to build an easy way for HFO to edit the list of TPS contacts, so that when this information changes, HFO can quickly and easily keep this information accurate and up-to-date.
-
-
-### original deploy to heroku followed these instructions:
-
-https://devcenter.heroku.com/articles/build-docker-images-heroku-yml
-
-and the fix for the `more than one MPM loaded` error:
-https://github.com/docker-library/wordpress/issues/293
+- [x] Front-end UI
+- [x] Back-end hosting
+- [x] Cloud function to determine eligibility and send mail
+- [x] Establish mail service and template via Mailjet
+- [ ] Update `NOTIFY_CC` in `src/lib/config.ts` to reflect email address to receive all submissions
+- [ ] Domain handling (_to get site pointed from \*.hungerfreeok.org_)
+- [ ] Domain email validation (_to get emails as sent from HFO_)
+- [ ] Continus deployment via GitHub Actions (_to redeploy cloud function + web app whenever commit is pushed to master branch_)
+- [ ] Add Google Analytics for tracking
+- [ ] Possibly use Google Places Autocomplete API for address lookup?
+- [ ] Possibly set up a hosted staging environment linked with a dev branch?

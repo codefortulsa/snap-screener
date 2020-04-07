@@ -1,0 +1,117 @@
+{
+  "translation": {
+    "header": {
+      "foodAssistance": "Asistencia alimentaria"
+    },
+
+    "footer": {
+      "specialThanks": "Un agradecimiento especial a las <1>Escuelas Públicas de Tulsa</1> por su apoyo y colaboración en este proyecto. El Programa de Asistencia Nutricional Suplementaria (SNAP) es un programa federal, administrado por la oficina del <3>Departamento de Servicios Humanos de Oklahoma</3> (OKDHS). Para obtener más información sobre OKDHS, visite <5>okdhslive.org</5> o llame al (405) 487-5483."
+    },
+
+    "home": {
+      "heading": "Averigüe si es elegible para recibir asistencia alimentaria.",
+      "stepOne": "Cuéntanos algo sobre los miembros de tu familia.",
+      "stepTwo": "Háganos saber cómo podemos ponernos en contacto con usted.",
+      "stepThree": "Averigüe para qué asistencia podría calificar.",
+      "getStarted": "Empiece",
+      "continue": "Seguir"
+    },
+
+    "breadcrumbs": {
+      "family": "Familia",
+      "income": "IncomeIngresos",
+      "contact": "Contacto",
+      "school": "Colegio"
+    },
+
+    "formControls": {
+      "next": "Siguiente",
+      "previous": "Anterior",
+      "submit": "Someter",
+      "required": "Obligatorio"
+    },
+
+    "stageOne": {
+      "heading": "Cuéntenos sobre la cantidad de personas en su hogar.",
+      "howManyChildrenUnder18": "¿Cuantos niños <1>menores de 18 años</1> viven en su hogar?",
+      "howManyAdultsOver18": "¿Cuantos adultos <1>mayores de 18 años</1> viven en su hogar? <3>Incluyendo usted.</3>",
+      "howManyAdultsOver60": "¿Cuantos adultos <1>mayores de 60 años</1> viven en su hogar?"
+    },
+
+    "stageTwo": {
+      "heading": "¿Cuál es el ingreso de su hogar?",
+      "subheading": "Para saber si es elegible para recibir asistencia alimentaria, necesitamos saber acerca de los ingresos de su hogar. Háganos saber el ingreso total que recibe de su trabajo, o si trabaja por cuenta propia, o cualquier ingreso de otros beneficios como el Seguro Social, TANF, WIC o cualquier otra fuente. Por ejemplo, puede indicar que recibe $200 por semana. O $800 por mes.",
+      "per": "por",
+      "every": "cada",
+      "Week": "Semana",
+      "2 Weeks": "2 Semanas",
+      "Month": "Mes",
+      "Year": "Año"
+    },
+
+    "stageThree": {
+      "heading": "Háganos saber cómo podemos ponernos en contacto con usted.",
+      "yourFirstName": "Su nombre",
+      "whichContactMethod": "¿Cuál es la mejor manera de contactarle?",
+      "Email": "Email",
+      "Phone": "Llamada telefónica",
+      "Text": "Mensaje de texto",
+      "emailAddress": "Email",
+      "phoneNumber": "Número de teléfono",
+      "contactPermission": "¿Tenemos su permiso para contactarlo para oportunidades de asistencia alimentaria?",
+      "Yes": "Sí",
+      "No": "No",
+      "address": "Dirección (incluyendo # de apt, si es aplicable)",
+      "city": "Ciudad",
+      "state": "Estado",
+      "zip": "Código postal"
+    },
+
+    "stageFour": {
+      "heading": "Por favor seleccione la escuela en la cual este asociado(a)",
+      "searchSchools": "Buscar escuelas",
+      "pressingSubmitDisclaimer": "Al presionar 'Someter' se enviará su información para su procesamiento."
+    },
+
+    "eligible": {
+      "heading": "Es posible que usted califica para recibir asistencia alimentaria.",
+      "subheading": "OKDHS determina la elegibilidad para los beneficios de SNAP. Basado en la información de ingresos que usted proporciones, es probable que seas elegible para recibir beneficios de SNAP.",
+      "whatNextHeading": "Esto sucederá ahora:",
+      "whatNextDescription": "Un miembro del personal de la escuela se comunicará con usted dentro de 3-5 días hábiles para ayudarlo con la solicitud de SNAP.",
+      "youWillNeedHeading": "Necesitarás la siguiente información para aplicar por los beneficios de SNAP:",
+      "youWillNeedList": [
+        "Para todos los miembros de la casa: nombre, fecha de nacimiento, numero de seguro socia (si esta disponible)",
+        "Ingresos (si es aplicable): talones de cheque, manutención del niño, pensión alimenticia, pagos del seguro social, etc.",
+        "Gastos: de alojamiento y servicios públicos",
+        "Facturas de servicios públicos para verificar la residencia",
+        "Información de seguro médico privado"
+      ],
+      "immediateAssistance": "Para obtener ayuda en la búsqueda de recursos rápidamente, <1>Llame al numero 211</1>.",
+      "contactWICOffice": "También puede comunicarse con la oficina del departamento de salud; <1>Tulsa Health Department WIC Office</1>.",
+      "youCanApplyOnline": "También puede aplicar por los beneficios de SNAP en el sitio web.",
+      "applyOnline": "Aplique en línea"
+    },
+
+    "ineligible": {
+      "heading": "Un representante de la escuela lo ayudará",
+      "subheading": "Un miembro del personal se contactar con usted dentro de 3-5 días hábiles para ayudarlo a encontrar recursos de asistencia alimentaria.",
+      "otherResourcesHeading": "Otros recursos",
+      "otherResourcesDescription": "Para ayuda rápida buscando recursos <1>haga clic aquí</1>."
+    },
+
+    "unused": {
+      "We will connect you with a TPS representative who will help.": "Lo conectaremos con un representante de TPS que lo ayudará.",
+      "Who is the head of your household?": "¿Quién es el jefe de tu hogar?",
+      "Does the head of household have a Social Security Number?": "¿El jefe de familia tiene un número de seguro social?",
+      "I prefer not to answer": "Prefiero no contestar",
+      "Based on the information you provided you and your family may be eligible to receive SNAP benefits.": "Basado en la información de ingresos que usted proporciones, es probable que sea elegible para recibir beneficios de SNAP.",
+      "Who will contact you?": "¿Quién te contactará?",
+      "You will be contacted by a SNAP trained school staff member within three business days to assist you with the SNAP application.": "Un miembro del personal se contactar con usted dentro de 3-5 días hábiles para ayudarle con la aplicación de SNAP.",
+      "You may <1>not</1> be eligible to receive SNAP benefits.": "Es posible que usted no califica para recibir asistencia alimentaria.",
+      "Based on the information you provided you and your family may not be eligible to receive SNAP benefits. Please know there are additional resources available to assist you and your family.": "OKDHS determina la elegibilidad para los beneficios de SNAP. Basado en la información de ingresos que usted proporciones, es probable que no seas elegible para recibir beneficios de SNAP. Hay recursos adicionales disponibles para ayudarlo a usted y a su familia.",
+      "Additional Resources": "Recursos Adicionales",
+      "more": "más",
+      "_": "_"
+    }
+  }
+}

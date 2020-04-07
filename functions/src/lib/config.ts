@@ -1,0 +1,1 @@
+/Users/kovacs/Development/Projects/snap-screener-cdoe/src/lib/config.ts

@@ -1,0 +1,24 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+html {
+  width: 100vw;
+  background-color: #ebe5e3;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  color: #22292f;
+}
+a {
+  color: #3490dc;
+}
+
+button:hover {
+  cursor: pointer;
+}
