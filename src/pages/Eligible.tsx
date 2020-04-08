@@ -2,7 +2,9 @@ import React, { useMemo, Fragment } from 'react';
 import styled from 'styled-components/macro';
 import { useTranslation, Trans } from 'react-i18next';
 import { useParams } from 'react-router-dom';
+import usePageView from '../hooks/usePageView';
 import kebabCase from 'lodash/kebabCase';
+import { analytics } from '../lib/firebase';
 
 import Panel from '../components/Panel';
 import Heading from '../components/Heading';
@@ -77,6 +79,7 @@ const List = styled.div`
 const Eligible: React.FC = () => {
   const { t } = useTranslation();
   const { school } = useParams();
+  usePageView('Eligible | SNAP Screener');
   const [allSchoolContacts] = useSchoolInfo();
   const schoolContacts = useMemo(
     () =>
@@ -168,7 +171,11 @@ const Eligible: React.FC = () => {
         {/* Apply Online */}
         {t('eligible.youCanApplyOnline')}
         <Spacer height='16px' />
-        <ButtonLink as='a' href='https://www.okdhslive.org/AuthApplicantLogin.aspx'>
+        <ButtonLink
+          as='a'
+          href='https://www.okdhslive.org/AuthApplicantLogin.aspx'
+          onClick={() => analytics.logEvent('click_application_link')}
+        >
           {t('eligible.applyOnline')}
         </ButtonLink>
 

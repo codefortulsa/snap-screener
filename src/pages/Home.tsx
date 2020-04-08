@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components/macro';
-import { withTranslation, useTranslation } from 'react-i18next';
 
+import { withTranslation, useTranslation } from 'react-i18next';
+import usePageView from '../hooks/usePageView';
 import useFormState from '../contexts/formState';
 
 import Panel from '../components/Panel';
@@ -82,6 +83,7 @@ const Arrow = styled(ArrowSvg)`
 
 const Home: React.FC = () => {
   const { t } = useTranslation();
+  usePageView('Get Started | SNAP Screener');
   const [{ stage }] = useFormState();
   return (
     <>

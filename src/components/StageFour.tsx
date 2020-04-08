@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import styled from 'styled-components/macro';
+
 import { useTranslation } from 'react-i18next';
 import { useHistory } from 'react-router-dom';
+import usePageView from '../hooks/usePageView';
 import { CLOUD_FUNCTIONS_SUBMIT_URL } from '../lib/config';
 import FormState from '../types/FormState';
 import useFormState from '../contexts/formState';
@@ -35,6 +37,8 @@ const StageFour: React.FC = () => {
   const { t } = useTranslation();
   const history = useHistory();
 
+  usePageView('School | SNAP Screener');
+
   const [hideDevBlock, setHideDevBlock] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formState, setFormState] = useFormState();
@@ -57,7 +61,7 @@ const StageFour: React.FC = () => {
             // Submit form data to cloud function for processing and emailing
             const resp = await fetch(CLOUD_FUNCTIONS_SUBMIT_URL, {
               method: 'POST',
-              body: JSON.stringify(formState)
+              body: JSON.stringify(formState),
             });
             if (resp.status === 400) throw new Error(await resp.text());
             // Returns boolen with eligibility status

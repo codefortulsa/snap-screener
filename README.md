@@ -63,9 +63,10 @@ npm start
 - [x] Cloud function to determine eligibility and send mail
 - [x] Establish mail service and template via Mailjet
 - [x] Update `NOTIFY_CC` in `src/lib/config.ts` to reflect email address to receive all submissions
-- [ ] Add Google Analytics for tracking
+- [x] Add Google Analytics for tracking
 - [ ] Domain handling (_to get site pointed from \*.hungerfreeok.org_)
 - [ ] Domain email validation (_to get emails as sent from HFO_)
 - [ ] Continus deployment via GitHub Actions (_to redeploy cloud function + web app whenever commit is pushed to master branch_)
 - [ ] Possibly use Google Places Autocomplete API for address lookup?
 - [ ] Possibly set up a hosted staging environment linked with a dev branch?
+- [ ] Possibly move NOTIFY_CC from hard-coded config file to google spreadsheet

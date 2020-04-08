@@ -1,6 +1,8 @@
 import React, { useRef } from 'react';
 import styled from 'styled-components/macro';
+
 import { useTranslation } from 'react-i18next';
+import usePageView from '../hooks/usePageView';
 import useFormState from '../contexts/formState';
 import { contactMethodOptions } from '../types/FormState';
 
@@ -33,9 +35,10 @@ const CityStateZipRow = styled.div`
 
 const StageThree: React.FC = () => {
   const { t } = useTranslation();
+  usePageView('Contact | SNAP Screener');
   const [
     { firstName, contactMethod, email, phone, contactPermission, address, city, zip },
-    setFormState
+    setFormState,
   ] = useFormState();
 
   const emailInputRef = useRef<HTMLInputElement>(null);

@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components/macro';
+
 import { useTranslation } from 'react-i18next';
+import usePageView from '../hooks/usePageView';
 import useFormState from '../contexts/formState';
 import { incomeFreqOptions } from '../types/FormState';
 
@@ -32,6 +34,7 @@ const IncomeInput = styled(Input)`
 
 const StageTwo: React.FC = () => {
   const { t } = useTranslation();
+  usePageView('Income | SNAP Screener');
   const [{ incomeAmount, incomeFreq }, setFormState] = useFormState();
 
   const stageIsValid = incomeAmount !== null && !!incomeFreq;
@@ -80,11 +83,11 @@ const StageTwo: React.FC = () => {
             isSearchable={false}
             options={incomeFreqOptions.map(freq => ({
               label: t(`stageTwo.${freq}`),
-              value: freq
+              value: freq,
             }))}
             value={{
               label: t(`stageTwo.${incomeFreq}`),
-              value: incomeFreq
+              value: incomeFreq,
             }}
             onChange={(selection: { label: string; value: typeof incomeFreq }) => {
               setFormState(prev => ({ ...prev, incomeFreq: selection.value }));

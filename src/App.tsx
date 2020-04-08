@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import './lib/i18n';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components/macro';
 import defaultTheme from './styles/defaultTheme';
 
@@ -28,6 +28,7 @@ const App = () => {
                   <Route path='/form' exact component={Form} />
                   <Route path='/eligible/:school?' exact component={Eligible} />
                   <Route path='/ineligible' exact component={Ineligible} />
+                  <Redirect to='/' />
                 </Switch>
               </PageWrapper>
             </Router>

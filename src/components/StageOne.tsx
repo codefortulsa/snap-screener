@@ -1,5 +1,7 @@
 import React from 'react';
+
 import { useTranslation, Trans } from 'react-i18next';
+import usePageView from '../hooks/usePageView';
 import useFormState from '../contexts/formState';
 
 import Panel from './Panel';
@@ -13,6 +15,7 @@ import { ReactComponent as RightArrow } from '../img/icons/arrow-right.svg';
 
 const StageOne: React.FC = () => {
   const { t } = useTranslation();
+  usePageView('Family | SNAP Screener');
   const [{ childrenUnder18, adultsOver18, adultsOver60 }, setFormState] = useFormState();
 
   const stageIsValid = childrenUnder18 !== null && adultsOver18 !== null && adultsOver60 !== null;

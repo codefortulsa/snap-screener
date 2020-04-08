@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 import { useTranslation, Trans } from 'react-i18next';
+import usePageView from '../hooks/usePageView';
 
 import Panel from '../components/Panel';
 import Heading from '../components/Heading';
@@ -29,6 +30,7 @@ const PageWrapper = styled.div`
 
 const Ineligible: React.FC = () => {
   const { t } = useTranslation();
+  usePageView('Ineligible | SNAP Screener');
 
   return (
     <PageWrapper>
