@@ -33,7 +33,7 @@ export const submitForm = functions.https.onRequest(async (request, response) =>
       state,
       zip,
       school,
-      devEmail
+      devEmail,
     } = formData;
 
     // Form validation
@@ -64,9 +64,13 @@ export const submitForm = functions.https.onRequest(async (request, response) =>
       mailtoContacts = schoolContacts.map(
         ({ contactFirstName, contactLastName, email: contactEmail }) => ({
           Name: [contactFirstName, contactLastName].join(' ').trim(),
-          Email: contactEmail.trim()
+          Email: contactEmail.trim(),
         })
       );
+      // If no contacts listed, just send to CC contact
+      if (!mailtoContacts.length) {
+        mailtoContacts = [{ Email: NOTIFY_CC }];
+      }
     }
 
     // Determine eligibility and return
@@ -79,16 +83,8 @@ export const submitForm = functions.https.onRequest(async (request, response) =>
           TemplateID: MAILJET_TEMPLATE_ID,
           TemplateLanguage: true,
           Subject: `SNAP Screener [${upperCase(eligibility)}]`,
-          // From: {
-          //   Email: 'noreply@notebird.app',
-          //   Name: sendingUser.name.full + ' (via Notebird)'
-          // },
           To: mailtoContacts,
           CC: ccContact,
-          // ReplyTo: {
-          //   Email: sendingUser.email,
-          //   Name: sendingUser.name.full
-          // },
           Variables: {
             eligibility,
             firstName,
@@ -103,16 +99,16 @@ export const submitForm = functions.https.onRequest(async (request, response) =>
             childrenUnder18: childrenUnder18 === 'More' ? 'More than 4' : childrenUnder18,
             adultsOver18: adultsOver18 === 'More' ? 'More than 4' : adultsOver18,
             adultsOver60: adultsOver60 === 'More' ? 'More than 4' : adultsOver60,
-            overUnder: difference < 0 ? `$${difference * -1} over` : `$${difference} under`
+            overUnder: difference < 0 ? `$${difference * -1} over` : `$${difference} under`,
           },
           Headers: {
             // Need to add this header in order to prevent automatic threading in gmail
             // Check out 'Additional details' section here:
             // https://gsuiteupdates.googleblog.com/2019/03/threading-changes-in-gmail-conversation-view.html
-            references: `<${uuidv4()}>`
-          }
-        }
-      ]
+            references: `<${uuidv4()}>`,
+          },
+        },
+      ],
     });
 
     // Return boolean with eligibility status
