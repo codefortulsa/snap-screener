@@ -7,7 +7,7 @@
 </h1>
 
 <h3 align="center">
-  Find out if you are eligible for food assistance at <b><a href="https://snap-screener-ok.web.app/">web address TBD</a></b>.
+  Find out if you are eligible for food assistance at <b><a href="https://snap-screener-ok.web.app/">Hunger Free Oklahoma</a></b>.
 </h3>
 
 ---
