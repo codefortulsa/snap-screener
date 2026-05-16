@@ -1,3 +1,5 @@
+> **Archive notice:** This SNAP Screener project is out of date and is no longer maintained. For current information about SNAP in Oklahoma, including help from the Hunger Free Oklahoma SNAP Hotline, visit [Hunger Free Oklahoma's SNAP resources](https://www.hungerfreeok.org/resources/snap/).
+
 <p align="center">
   <img width="384" height="48" src='./src/img/HFO_logo_horiz.png?raw=true' alt="Hunger Free Oklahoma" />
 </p>

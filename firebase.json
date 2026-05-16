@@ -8,10 +8,11 @@
   "hosting": {
     "public": "build",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-    "rewrites": [
+    "redirects": [
       {
         "source": "**",
-        "destination": "/index.html"
+        "destination": "https://www.hungerfreeok.org/resources/snap/",
+        "type": 301
       }
     ]
   }
